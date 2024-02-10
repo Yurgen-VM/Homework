@@ -12,9 +12,9 @@ using System.Globalization;
 Console.Write("Введите любое натуральное число: ");
 int number = Convert.ToInt32(Console.ReadLine());
 int number_temp = number;
-int amauntDigit = 1;
+int amauntDigit;
 
-if (number_temp > 9)
+if (number_temp > 9) // Вычисляем количество цифр в числе (получаем разрядность) 
 {
     for (amauntDigit = 1; number_temp / 10 > 0; amauntDigit++)
     {
@@ -24,7 +24,7 @@ if (number_temp > 9)
     //Console.WriteLine($"{amauntDigit}, {number}");
 
 
-    int divisor = 10;
+    int divisor = 10; // Создем динамический делитель для вычисления целого значения при классическом делении. Делитель зависит от разрядности полученного числа  
     for (divisor = 10; amauntDigit > 2; amauntDigit--)
     {
         divisor = divisor * 10;
