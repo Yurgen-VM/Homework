@@ -7,7 +7,6 @@
 На выходе: 4,8,5
 */
 
-using System.Globalization;
 
 Console.Write("Введите любое натуральное число: ");
 int number = Convert.ToInt32(Console.ReadLine());
@@ -47,7 +46,7 @@ if (number_temp > 9) // Вычисляем количество цифр в чи
 } 
 else
 {
-    if (number_temp >= 0)
+    if (number_temp > 0)
     {
         Console.WriteLine($"{number}");
     }
